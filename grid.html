@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="item0">Header</div>
+            <div class="item1">Menu</div>
+            <div class="item2">Main</div>
+            <div class="item3">Right</div>
+            <div class="item4">Footer</div>
+      </div>
+    </main>
+    
+</body>
+</html>
+<style>
+    .item0{
+        grid-area: header;
+    }
+    .item1{
+        grid-area: menu;
+        border-top: 5px solid blue;
+        
+    }
+    .item2{
+        grid-area: main;
+        border: 5px solid blue;
+    }
+    .item3{
+        grid-area: right;
+        border-top: 5px solid blue;
+    }
+    .item4{
+        grid-area: footer;
+        border-left: 5px solid blue;
+        border-right: 5px solid blue;
+    }
+    .container{
+        display: grid;
+        border: 5px solid blue;
+        grid-template-columns: 20% 50% 30% ;
+        grid-template-rows: auto;
+        grid-template-areas:
+        ". header . "
+        "menu main right "
+        ". footer ."
+        
+    }
+</style>
